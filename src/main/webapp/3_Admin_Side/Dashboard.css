@@ -43,7 +43,7 @@ img {
     width: 300px;
     height: 100vh;
     padding: 25px 20px;
-    background: #253047;
+    background: #01605c;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -91,17 +91,12 @@ img {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-    background: #01605c;
+    background: #2b6434;
     color: #fff;
 }
 
 .signout {
-    display: block;
     margin-top: auto;
-    padding: 14px 15px;
-    color: #ffbd38;
-    font-size: 14px;
-    font-weight: 600;
 }
 
 
@@ -195,69 +190,78 @@ img {
 
 .stat-card {
     min-width: 0;
-    padding: 22px;
-    background: #fffefa;
+    min-height: 181px;
+    padding: 24px;
     border: 1px solid #e5ddd1;
-    border-radius: 16px;
-    box-shadow: 0 3px 12px rgba(37, 48, 71, 0.04);
+    border-radius: 19px;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 30px rgb(223, 221, 221);
 }
 
 .stat-top {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .stat-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 19px;
+    justify-content: center;
+    font-size: 20px;
 }
 
 .student-icon {
-    background: #e7f2f0;
-    color: #01605c;
+    background: #fff0d2;
+    color: #253047;
 }
 
 .company-icon {
-    background: #fff2d8;
-    color: #c28a1b;
+    background: #e4efec;
+    color: #32877d;
 }
 
 .opportunity-icon {
-    background: #e9edf7;
-    color: #52658c;
+    background: #ffead5;
+    color: #e55c25;
 }
 
 .placement-icon {
-    background: #e4f3e9;
+    background: #e4efec;
     color: #32877d;
 }
 
 .trend {
     color: #32877d;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.stat-card h3 {
-    color: #75829a;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 19px;
+    text-decoration: none;
 }
 
 .stat-card h2 {
-    color: #253047;
-    font-size: 28px;
-    font-weight: 700;
-    overflow-wrap: anywhere;
+    font-size: 35px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #75829a;
+}
+
+.stat-card p span {
+    color: #32877d;
 }
 
 
@@ -265,31 +269,31 @@ img {
 .content-section {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
-    gap: 25px;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
     align-items: start;
-    min-width: 0;
+    gap: 28px;
 }
 
 .left-content,
 .right-content {
-    width: 100%;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .section-heading h2 {
-    color: #253047;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    font-size: 15px;
+    color: #75829a;
 }
 
 
@@ -307,29 +311,30 @@ img {
 }
 
 .chart-header {
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
     min-width: 0;
 }
 
-.chart-icon {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    border-radius: 12px;
-    background: #e7f2f0;
-    color: #01605c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.chart-header h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
 }
 
-.chart-header h3 {
-    color: #253047;
-    font-size: 16px;
-    font-weight: 700;
+.chart-header p {
+    font-size: 14px;
+    color: #75829a;
+    line-height: 1.5;
 }
+
+.chart-icon {
+    font-size: 22px;
+    color: #32877d;
+}
+
 
 
 .chart-area {
@@ -347,83 +352,85 @@ img {
 }
 
 
-
 .activity-header {
+    width: 100%;
+    min-height: 48px;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
     gap: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .activity-header h2 {
-    color: #253047;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 21px;
+}
+
+.activity-header a {
+    color: #32877d;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 5px;
 }
 
 .activity-list {
     width: 100%;
-    min-width: 0;
-    padding: 10px 20px;
-    background: #fffefa;
     border: 1px solid #e5ddd1;
-    border-radius: 18px;
-    box-shadow: 0 3px 12px rgba(37, 48, 71, 0.04);
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
 }
 
 .activity-item {
     width: 100%;
+    min-height: 85px;
+    padding: 20px;
+    border-bottom: 1px solid #e5ddd1;
     display: flex;
     align-items: flex-start;
-    gap: 13px;
-    padding: 17px 0;
-    border-bottom: 1px solid #eee9e1;
-    min-width: 0;
+    gap: 15px;
 }
 
 .activity-item:last-child {
     border-bottom: none;
 }
 
-.activity-icon {
-    width: 35px;
-    height: 35px;
-    min-width: 35px;
+.activity-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    background: #32877d;
     border-radius: 50%;
-    background: #e7f2f0;
-    color: #01605c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 5px;
 }
 
 .activity-content {
-    flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .activity-content h3 {
-    color: #253047;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 15px;
     line-height: 1.5;
-    overflow-wrap: anywhere;
+    margin-bottom: 5px;
 }
 
 .activity-content p {
-    color: #75829a;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
-    margin-top: 4px;
-    overflow-wrap: anywhere;
+    color: #75829a;
 }
 
-.activity-time {
+.activity-item time {
     color: #75829a;
-    font-size: 11px;
+    font-size: 12px;
     white-space: nowrap;
-    margin-left: 5px;
+    margin-left: auto;
 }
 
 
