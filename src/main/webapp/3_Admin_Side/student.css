@@ -1,0 +1,818 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf9f6;
+    color: #253047;
+    font-size: 12px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #01605c;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.menu-title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #ffbd38;
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a,
+.signout {
+    text-decoration: none;
+    color: #d0d7e5;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.sidebar nav a.active {
+    background: #438c50;
+    color: #202a40;
+}
+
+.sidebar nav a:hover {
+    background: #2b6434;
+    color: white;
+}
+
+.sidebar nav a.active:hover {
+    background: #438c50;
+    color: #202a40;
+}
+
+.signout {
+    margin-top: auto;
+}
+
+.sidebar a:hover {
+    background: #2b6434;
+    color: white;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    min-width: 0;
+}
+
+/* TOPBAR */
+.topbar {
+    height: 80px;
+    border-bottom: 2px solid #e7e0d6;
+    padding: 7px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf9f6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* HEADER TITLE */
+.topbar p {
+    color: gray;
+    font-size: 15px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+    font-family: Georgia;
+}
+
+.user {
+    background: #ffbd38;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia;
+}
+
+/* PAGE CONTENT */
+.page-content {
+    width: 100%;
+    min-width: 0;
+    padding: 35px 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* INTRODUCTION */
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* INTRO TEXT */
+.intro p {
+    font-size: 16px;
+    color: #75829a;
+    line-height: 1.6;
+}
+
+/* RECORDS */
+.records {
+    color: #75829a;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* SEARCH SECTION */
+.search-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+/* SEARCH BOX */
+.search-box {
+    width: 85%;
+    height: 50px;
+    min-width: 0;
+    padding: 0 17px;
+    border: 1px solid #ded5c8;
+    border-radius: 19px;
+    background: #fffefa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+}
+
+/* SEARCH ICON */
+.search-icon {
+    font-size: 25px;
+    color: #75829a;
+}
+
+/* SEARCH INPUT */
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    color: #253047;
+}
+
+/* SEARCH PLACEHOLDER */
+.search-box input::placeholder {
+    color: #9aa2ae;
+}
+
+/* BRANCH FILTER */
+.branch-filter {
+    width: 15%;
+    min-width: 150px;
+    height: 50px;
+    padding: 0 14px;
+    border: 1px solid #ded5c8;
+    border-radius: 19px;
+    background: #fffefa;
+    color: #253047;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+/* SEARCH AND FILTER FOCUS */
+.search-box:focus-within,
+.branch-filter:focus {
+    border-color: #01605c;
+}
+
+/* STUDENT TABLE */
+.student-table {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #e5ddd1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TABLE HEADER */
+.table-header {
+    width: 100%;
+    min-height: 55px;
+    padding: 0 23px;
+    background: #f8f6f1;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* STUDENT COLUMN */
+.student-column {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ACADEMIC COLUMN */
+.academic-column {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* SKILLS COLUMN */
+.skills-column {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* STATUS COLUMN */
+.status-column {
+    width: 15%;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTACT COLUMN */
+.contact-column {
+    width: 10%;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER TEXT */
+.table-header .student-column,
+.table-header .academic-column,
+.table-header .skills-column,
+.table-header .status-column,
+.table-header .contact-column {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #718098;
+}
+
+/* STUDENT ROW */
+.student-row {
+    width: 100%;
+    min-height: 83px;
+    padding: 0 23px;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* LAST ROW */
+.student-row:last-child {
+    border-bottom: none;
+}
+
+/* STUDENT DETAILS */
+.student-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+/* AVATAR */
+.avatar,
+.student-avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: #fff0d2;
+    color: #253047;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* STUDENT INFO */
+.student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+/* STUDENT NAME */
+.student-info h3,
+.student-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* STUDENT EMAIL */
+.student-info p,
+.student-details p {
+    font-size: 14px;
+    color: #75829a;
+    overflow-wrap: anywhere;
+}
+
+/* ACADEMIC DETAILS */
+.academic-column strong,
+.academic-column h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+/* ACADEMIC DESCRIPTION */
+.academic-column p {
+    font-size: 14px;
+    color: #75829a;
+    overflow-wrap: anywhere;
+}
+
+/* SKILLS LIST */
+.skill-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* SKILL */
+.skill-list span,
+.skill {
+    background: #f0ede7;
+    color: #526078;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* STATUS */
+.status {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* ACTIVE STATUS */
+.status.active {
+    color: #253047;
+}
+
+/* PLACED STATUS */
+.status.placed {
+    color: #32877d;
+}
+
+/* CONTACT BUTTON */
+.contact-button,
+.contact-link {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e5ddd1;
+    border-radius: 14px;
+    background: #fffefa;
+    color: #253047;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* CONTACT HOVER */
+.contact-button:hover,
+.contact-link:hover {
+    background: #ffbd38;
+    border-color: #ffbd38;
+}
+
+/* NO RESULTS MESSAGE */
+#noStudentsFound {
+    padding: 20px;
+    text-align: center;
+    color: #75829a;
+    font-size: 14px;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 230px;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+        margin-left: 230px;
+        width: calc(100% - 230px);
+    }
+
+    /* TOPBAR */
+    .topbar {
+        padding: 12px 22px;
+    }
+
+    /* PAGE CONTENT */
+    .page-content {
+        padding: 25px 20px;
+    }
+
+    /* SEARCH SECTION */
+    .search-section {
+        gap: 12px;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+        flex: 1 1 0;
+        width: auto;
+    }
+
+    /* BRANCH FILTER */
+    .branch-filter {
+        flex: 0 1 240px;
+        width: auto;
+        min-width: 0;
+    }
+
+    /* TABLE HEADER */
+    .table-header {
+        padding: 0 12px;
+    }
+
+    /* STUDENT ROW */
+    .student-row {
+        padding: 0 12px;
+    }
+
+    /* STUDENT COLUMN */
+    .student-column {
+        width: 27%;
+    }
+
+    /* ACADEMIC COLUMN */
+    .academic-column {
+        width: 25%;
+    }
+
+    /* SKILLS COLUMN */
+    .skills-column {
+        width: 23%;
+    }
+
+    /* STATUS COLUMN */
+    .status-column {
+        width: 15%;
+    }
+
+    /* CONTACT COLUMN */
+    .contact-column {
+        width: 10%;
+    }
+
+    /* STUDENT DETAILS */
+    .student-details {
+        gap: 8px;
+    }
+
+    /* STUDENT NAME */
+    .student-info h3,
+    .student-details h3 {
+        font-size: 13px;
+    }
+
+    /* STUDENT EMAIL */
+    .student-info p,
+    .student-details p {
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    /* ACADEMIC */
+    .academic-column strong,
+    .academic-column h3 {
+        font-size: 13px;
+    }
+
+    .academic-column p {
+        font-size: 10px;
+    }
+
+    /* SKILLS */
+    .skill-list {
+        gap: 4px;
+    }
+
+    .skill-list span,
+    .skill {
+        font-size: 9px;
+        padding: 5px 7px;
+    }
+}
+
+/* SMALL TABLET */
+@media (max-width: 800px) {
+
+    /* SEARCH SECTION */
+    .search-section {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+        width: 100%;
+        flex: 0 0 auto;
+        height: 50px;
+    }
+
+    /* SEARCH INPUT */
+    .search-box input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* BRANCH FILTER */
+    .branch-filter {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+        height: 50px;
+    }
+
+    /* TABLE */
+    .student-table {
+        overflow-x: auto;
+    }
+
+    /* TABLE HEADER AND ROWS */
+    .table-header,
+    .student-row {
+        min-width: 850px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 550px) {
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 120px;
+        padding: 15px 7px;
+    }
+
+    /* LOGO */
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        margin-bottom: 30px;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .logo h2 {
+        font-size: 13px;
+    }
+
+    /* MENU TITLE */
+    .menu-title {
+        font-size: 7px;
+        letter-spacing: 1px;
+        margin: 0 4px 15px;
+    }
+
+    /* NAVIGATION */
+    .sidebar nav {
+        gap: 5px;
+    }
+
+    .sidebar nav a {
+        min-height: 45px;
+        gap: 5px;
+        padding: 8px 5px;
+        font-size: 10px;
+    }
+
+    .nav-icon {
+        font-size: 13px;
+    }
+
+    .arrow {
+        font-size: 15px;
+    }
+
+    /* SIGN OUT */
+    .signout {
+        font-size: 10px;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+        margin-left: 120px;
+        width: calc(100% - 120px);
+    }
+
+    /* TOPBAR */
+    .topbar {
+        height: auto;
+        min-height: 80px;
+        padding: 12px 10px;
+        gap: 5px;
+    }
+
+    /* HEADER TITLE */
+    .header-title small {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .header-title h1 {
+        font-size: 17px;
+    }
+
+    /* HEADER RIGHT */
+    .header-right {
+        gap: 5px;
+    }
+
+    /* CONNECTION */
+    .connection {
+        font-size: 8px;
+        padding: 7px;
+        gap: 4px;
+    }
+
+    .connection-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* USER */
+    .user {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    /* PAGE CONTENT */
+    .page-content {
+        padding: 15px 10px;
+        gap: 18px;
+    }
+
+    /* INTRO */
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .intro p {
+        font-size: 11px;
+    }
+
+    .records {
+        font-size: 9px;
+    }
+
+    /* SEARCH SECTION */
+    .search-section {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+        width: 100%;
+        height: 42px;
+        min-width: 0;
+        padding: 0 10px;
+        gap: 8px;
+        flex: 0 0 auto;
+    }
+
+    /* SEARCH INPUT */
+    .search-box input {
+        width: 100%;
+        min-width: 0;
+        font-size: 10px;
+    }
+
+    /* SEARCH ICON */
+    .search-icon {
+        font-size: 19px;
+    }
+
+    /* FILTER */
+    .branch-filter {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 42px;
+        padding: 0 10px;
+        font-size: 11px;
+        flex: 0 0 auto;
+    }
+
+    /* TABLE */
+    .student-table {
+        border-radius: 12px;
+    }
+
+    .table-header,
+    .student-row {
+        min-width: 750px;
+    }
+
+    .table-header {
+        min-height: 45px;
+    }
+
+    .student-row {
+        min-height: 70px;
+    }
+}

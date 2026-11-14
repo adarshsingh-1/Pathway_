@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("image/background image.png");
+    color: #18263f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* PAGE */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* LEFT SECTION */
+
+.left-section {
+    width: 45%;
+    min-height: 100vh;
+    background-color: rgb(20, 20, 67);
+    color: white;
+    padding: 48px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LEFT CONTENT */
+
+.left-content {
+    position: absolute;
+    left: 50px;
+    top: 52%;
+    transform: translateY(-50%);
+}
+
+.small-heading {
+    color: goldenrod;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.left-content h1 {
+    font-size: 70px;
+    line-height: 0.98;
+    margin-bottom: 32px;
+}
+
+.left-content p {
+    max-width: 580px;
+    color: rgb(205, 187, 187);
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+
+/* BOTTOM STEPS */
+
+.steps {
+    position: absolute;
+    bottom: 45px;
+    left: 50px;
+    right: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    gap: 40px;
+    color: rgb(205, 187, 187);
+    font-size: 14px;
+}
+
+
+/* RIGHT SECTION */
+
+.right-section {
+    width: 55%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LOGIN CONTAINER */
+
+.login-container {
+    width: 70%;
+    max-width: 565px;
+}
+
+
+/* BACK */
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #62758f;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.back a {
+    text-decoration: none;
+    color: #62758f;
+}
+
+.back-arrow {
+    font-size: 22px;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    color: #168a88;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+
+/* HEADING */
+
+.login-container h2 {
+    color: #182a43;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #6d7f97;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 37px;
+}
+
+
+/* WORKSPACE */
+
+.workspace-selection input[type="radio"] {
+    display: none;
+}
+
+.workspace-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 32px;
+}
+
+.workspace-card {
+    width: 50%;
+    min-height: 160px;
+    padding: 27px 25px;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.student-card{
+    border-right: 1px solid rgb(20, 20, 67);
+    border-bottom: 1px solid rgb(20, 20, 67);
+}
+
+.coordinator-card{
+    border-right: 1px solid #01605c;
+    border-bottom: 1px solid #01605c;
+}
+
+
+/* SELECTED CARD */
+
+#student:checked~.workspace-container .student-card,
+#coordinator:checked~.workspace-container .coordinator-card {
+    border-color: #f6b52f;
+    background-color: #fff5e3;
+    box-shadow: 0 2px 0 rgba(246, 181, 47, 0.15);
+}
+
+.workspace-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* CARD ICON */
+
+.card-icon {
+    color: #172942;
+    font-size: 20px;
+    height: 37px;
+}
+
+.coordinator-icon {
+    color: #01605c;
+    font-size: 26px;
+}
+
+
+/* CARD TEXT */
+
+.workspace-card h3 {
+    color: #14243c;
+    font-size: 17px;
+    margin-bottom: 9px;
+    font-weight: 700;
+}
+
+.workspace-card p {
+    color: #657993;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* ENTER BUTTON */
+
+.enter-button {
+    display: none;
+    width: 100%;
+    min-height: 60px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 19px;
+    border-right: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    background-color: #222d47;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#student:checked~.enter-actions .student-enter {
+    display: flex;
+}
+
+#coordinator:checked~.enter-actions .coordinator-enter {
+    display: flex;
+}
+
+.enter-button:hover {
+    transform: translateY(-2px);
+    border: 2px solid goldenrod;
+}
+
+.button-arrow {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .page {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .left-section {
+        padding: 35px;
+    }
+
+    .left-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 100px;
+    }
+
+    .steps {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: 80px;
+    }
+
+    .right-section {
+        padding: 60px 30px;
+    }
+
+    .login-container {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .left-content h1 {
+        font-size: 45px;
+    }
+
+    .workspace-container {
+        flex-direction: column;
+    }
+
+    .workspace-card {
+        width: 100%;
+    }
+
+    .steps {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .login-container h2 {
+        font-size: 34px;
+    }
+}

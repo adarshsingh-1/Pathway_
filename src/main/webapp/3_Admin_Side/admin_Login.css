@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("image/background image.png");
+    color: #18263f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* PAGE */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* LEFT SECTION */
+
+.left-section {
+    width: 45%;
+    min-height: 100vh;
+    background-color: #01605c;
+    color: white;
+    padding: 48px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LEFT CONTENT */
+
+.left-content {
+    position: absolute;
+    left: 50px;
+    top: 52%;
+    transform: translateY(-50%);
+}
+
+.small-heading {
+    color: goldenrod;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.left-content h1 {
+    font-size: 70px;
+    line-height: 0.98;
+    margin-bottom: 32px;
+}
+
+.left-content p {
+    max-width: 580px;
+    color: rgb(205, 187, 187);
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+
+/* BOTTOM STEPS */
+
+.steps {
+    position: absolute;
+    bottom: 45px;
+    left: 50px;
+    right: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    gap: 40px;
+    color: rgb(205, 187, 187);
+    font-size: 14px;
+}
+
+/* RIGHT SECTION */
+.right-Section{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-Section-Header{
+    text-align:left;
+    margin-left: 125px;
+    height: 50px;
+    margin-top: 50px;
+}
+.right-Section-Header a{
+    text-decoration: none;
+    color: #62758f;
+}
+
+.right-Section-form{
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 550px;
+    width: 550px;
+    overflow: hidden;
+    margin-left: 150px;
+    box-shadow: 0px 0px 5px gray;
+    .img{
+        text-align: center;
+        margin-top: 30px;
+    }
+    h2{
+        text-align: center;
+        color: rgb(15, 233, 160);
+        margin-top: 10px;
+    }
+    p{
+        text-align: center;
+        margin-top: 10px;
+        color: #62758f;
+    }
+}
+
+.form{
+    margin-top:20px;
+    margin-left: 50px;
+}
+.span{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.input{
+    border: 2px solid rgb(199, 194, 194);
+    border-radius: 10px;
+    height: 35px;
+    width: 400px;
+    margin-top: 10px;
+    padding: 20px;
+    margin-left: 30px; 
+    margin-bottom: 10px;       
+}
+.input:hover{
+    border: 2px solid black;
+    box-shadow: 0px 2px 4px gray;
+}
+
+.login{
+    background-color: #01605c;
+    color: whitesmoke;
+    height: 40px;
+    width: 400px;
+    border-right: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    border-radius: 20px;
+    margin-left: 30px; 
+    margin-top: 20px; 
+    margin-bottom: 10px;  
+}
+.login:hover{
+    border: 2px solid goldenrod;
+}
+
+.form_buttom{
+    text-align: center;
+    background-color: antiquewhite;
+    height: 90px;
+    padding: 5px;
+    margin-top: 40px;
+    p{
+        color: #01605c;
+    }
+    span{
+        color: #62758f;
+    }
+}
+
+
+
+
+/* Left section minimizes first */
+@media screen and (max-width: 1100px) {
+
+    .left-section {
+        width: 30%;
+        padding: 30px 20px;
+    }
+
+    .right-Section {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .right-Section-form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .right-Section-Header {
+        margin-left: 5%;
+    }
+
+    .left-content {
+        left: 20px;
+        right: 15px;
+    }
+
+    .left-content h1 {
+        font-size: 40px;
+    }
+
+    .left-content p {
+        font-size: 15px;
+    }
+
+    .steps {
+        left: 20px;
+        right: 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Hide left section on small screens */
+@media screen and (max-width: 768px) {
+
+    .left-section {
+        display: none;
+    }
+
+    .right-Section {
+        width: 100%;
+        flex: 1;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .right-Section-form {
+        width: 100%;
+        max-width: 550px;
+        margin: 0;
+        height: auto;
+        padding: 20px;
+    }
+
+    .right-Section-Header {
+        width: 100%;
+        margin: 10px 0 20px;
+    }
+
+    .input,
+    .login,
+    .google-btn {
+        max-width: 100%;
+    }
+}

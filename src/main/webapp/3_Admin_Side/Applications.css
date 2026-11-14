@@ -1,0 +1,602 @@
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf9f6;
+    color: #253047;
+    font-size: 14px;
+}
+
+select {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #01605c;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.menu-title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #ffbd38;
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a,
+.signout {
+    text-decoration: none;
+    color: #d0d7e5;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.sidebar nav a.active {
+    background: #438c50;
+    color: #202a40;
+}
+
+.sidebar nav a:hover {
+    background: #2b6434;
+    color: white;
+}
+
+.sidebar nav a.active:hover {
+    background: #438c50;
+    color: #202a40;
+}
+
+.signout {
+    margin-top: auto;
+}
+.sidebar a:hover{
+    background: #2b6434;
+    color: white;
+}
+
+
+/* MAIN CONTENT */
+
+.main-content {
+    margin-left: 300px;
+
+    width: calc(100% - 300px);
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* TOP HEADER */
+
+.topbar {
+    height: 80px;
+    border-bottom: 2px solid #e7e0d6;
+    padding: 7px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf9f6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* HEADER TITLE */
+.topbar p {
+    color: gray;
+    font-size: 15px;
+}
+.topbar h1 {
+    font-size:30px;
+    font-family:Georgia;
+}
+.user {
+    background: #ffbd38;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:Georgia;
+}
+
+
+/* CONTENT */
+
+.content {
+    width: 100%;
+
+    padding: 35px;
+}
+
+
+/* INTRO */
+
+.intro {
+    width: 100%;
+
+    min-height: 65px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.intro p {
+    color: #77849b;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    width: 70%;
+}
+
+
+/* STATUS FILTER */
+
+.status-filter {
+    width: 145px;
+    height: 52px;
+
+    padding: 0 15px;
+
+    border: 1px solid #ded5c8;
+    border-radius: 18px;
+
+    background: #fffefa;
+
+    color: #253047;
+
+    outline: none;
+}
+
+
+/* APPLICATION TABLE */
+
+.application-table {
+    width: 100%;
+
+    border: 1px solid #e5ddd1;
+    border-radius: 20px;
+
+    background: #fffefa;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* TABLE HEADER */
+
+.table-header {
+    width: 100%;
+    height: 55px;
+
+    background: #f7f5f0;
+
+    border-bottom: 1px solid #e5ddd1;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+
+/* TABLE COLUMNS */
+
+.candidate-column {
+    width: 15%;
+
+    padding-left: 23px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.opportunity-column {
+    width: 29%;
+
+    padding-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.applied-column {
+    width: 11%;
+
+    padding-left: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.status-column {
+    width: 18%;
+
+    padding-left: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.change-column {
+    width: 27%;
+
+    padding-right: 22px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* TABLE HEADER TEXT */
+
+.table-header .candidate-column,
+.table-header .opportunity-column,
+.table-header .applied-column,
+.table-header .status-column,
+.table-header .change-column {
+    font-family: monospace;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    color: #718097;
+}
+
+
+/* APPLICATION ROW */
+
+.application-row {
+    width: 100%;
+    height: 88px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    border-bottom: 1px solid #e5ddd1;
+}
+
+.application-row:last-child {
+    border-bottom: none;
+}
+
+
+/* CANDIDATE */
+
+.application-row .candidate-column h3 {
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.application-row .candidate-column small {
+    font-family: monospace;
+
+    font-size: 12px;
+
+    color: #77849b;
+}
+
+
+/* OPPORTUNITY */
+
+.application-row .opportunity-column h3 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.application-row .opportunity-column p {
+    font-size: 14px;
+
+    color: #77849b;
+}
+
+
+/* APPLIED DATE */
+
+.application-row .applied-column {
+    color: #77849b;
+    font-size: 14px;
+}
+
+
+/* STATUS */
+
+.status {
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* PENDING */
+
+.pending {
+    background: #f0ece5;
+    color: #718097;
+}
+
+
+/* REJECTED */
+
+.rejected {
+    background: #f9e8e5;
+    color: #d52e20;
+}
+
+
+/* SHORTLISTED */
+
+.shortlisted {
+    background: #ffedcf;
+    color: #98601d;
+}
+
+
+/* SELECTED */
+
+.selected {
+    background: #e0eeea;
+    color: #32877d;
+}
+
+
+/* CHANGE STATUS */
+
+.change-column select {
+    width: 118px;
+    height: 43px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ded5c8;
+    border-radius: 15px;
+
+    background: #fffefa;
+
+    color: #253047;
+
+    outline: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+    .main-content {
+        margin-left: 230px;
+        width: calc(100% - 230px);
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .candidate-column {
+        width: 18%;
+    }
+
+    .opportunity-column {
+        width: 27%;
+    }
+
+    .applied-column {
+        width: 12%;
+    }
+
+    .status-column {
+        width: 17%;
+    }
+
+    .change-column {
+        width: 26%;
+    }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 180px;
+
+        padding: 20px 12px;
+    }
+
+    .main-content {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .topbar {
+        padding: 15px 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .application-table {
+        overflow-x: auto;
+    }
+
+    .table-header,
+    .application-row {
+        min-width: 850px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+
+    .sidebar {
+        width: 70px;
+
+        padding: 15px 8px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo h2,
+    .sidebar-title,
+    .navigation a,
+    .signout {
+        font-size: 0;
+    }
+
+    .navigation a {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .nav-icon {
+        font-size: 20px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .topbar {
+        height: 80px;
+
+        padding: 10px;
+    }
+
+    .page-heading h1 {
+        font-size: 18px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+    }
+
+    .connection {
+        display: none;
+    }
+
+    .user-circle {
+        width: 35px;
+        height: 35px;
+
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .intro p {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .status-filter {
+        width: 100%;
+    }
+
+}

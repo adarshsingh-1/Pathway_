@@ -1,0 +1,787 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf9f6;
+    color: #253047;
+    font-size: 12px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #01605c;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.menu-title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #ffbd38;
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a,
+.signout {
+    text-decoration: none;
+    color: #d0d7e5;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.sidebar nav a.active {
+    background: #438c50;
+    color: #202a40;
+}
+
+.sidebar nav a:hover {
+    background: #2b6434;
+    color: white;
+}
+
+.sidebar nav a.active:hover {
+    background: #438c50;
+    color: #202a40;
+}
+
+.signout {
+    margin-top: auto;
+}
+.sidebar a:hover{
+    background: #2b6434;
+    color: white;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+}
+
+/* TOPBAR */
+.topbar {
+    height: 80px;
+    border-bottom: 2px solid #e7e0d6;
+    padding: 7px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf9f6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* HEADER TITLE */
+.topbar p {
+    color: gray;
+    font-size: 15px;
+}
+.topbar h1 {
+    font-size:30px;
+    font-family:Georgia;
+}
+.user {
+    background: #ffbd38;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:Georgia;
+}
+
+/* DASHBOARD */
+.dashboard {
+    width: 100%;
+    padding: 35px 38px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+/* INTRODUCTION */
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* INTRO TEXT */
+.intro p {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #75829a;
+}
+
+/* DATE */
+.date {
+    color: #75829a;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* STATISTICS */
+.stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+/* STAT CARD */
+.stat-card {
+    width: 25%;
+    height: 181px;
+    padding: 24px;
+    border: 1px solid #e5ddd1;
+    border-radius: 19px;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
+}
+.stat-card:hover{
+    transform:translateY(-5px);
+    box-shadow: 0px 5px 30px rgb(223, 221, 221);
+}
+
+/* STAT TOP */
+.stat-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* STAT ICON */
+.stat-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* STUDENT ICON */
+.student-icon {
+    background: #fff0d2;
+    color: #253047;
+}
+
+/* COMPANY ICON */
+.company-icon {
+    background: #e4efec;
+    color: #32877d;
+}
+
+/* OPPORTUNITY ICON */
+.opportunity-icon {
+    background: #ffead5;
+    color: #e55c25;
+}
+
+/* PLACEMENT ICON */
+.placement-icon {
+    background: #e4efec;
+    color: #32877d;
+}
+
+/* TREND */
+.trend {
+    color: #32877d;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+/* STAT NUMBER */
+.stat-card h2 {
+    font-size: 35px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+/* STAT DESCRIPTION */
+.stat-card p {
+    font-size: 15px;
+    color: #75829a;
+    white-space: nowrap;
+}
+
+/* STAT DESCRIPTION HIGHLIGHT */
+.stat-card p span {
+    
+    color: #32877d;
+}
+
+/* LOWER CONTENT */
+.content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+/* LEFT CONTENT */
+.left-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+/* SECTION HEADING */
+.section-heading {
+    margin-bottom: 20px;
+}
+
+/* SECTION TITLE */
+.section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* SECTION DESCRIPTION */
+.section-heading p {
+    font-size: 15px;
+    color: #75829a;
+}
+
+/* CHART PANEL */
+.chart-panel {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    border: 1px solid #e5ddd1;
+    border-radius: 20px;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CHART HEADER */
+.chart-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* CHART TITLE */
+.chart-header h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* CHART DESCRIPTION */
+.chart-header p {
+    font-size: 14px;
+    color: #75829a;
+}
+
+/* CHART ICON */
+.chart-icon {
+    font-size: 22px;
+    color: #32877d;
+}
+
+/* CHART AREA */
+.chart-area {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 25px;
+}
+
+#applicationStatusChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* CHART CONTENT */
+.chart-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* CHART LINE */
+.chart-line {
+    width: 100%;
+    height: 100%;
+}
+
+/* CHART LABELS */
+.chart-labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+/* CHART LABEL */
+.chart-labels span {
+    font-size: 10px;
+    color: #75829a;
+}
+
+/* RIGHT CONTENT */
+.right-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ACTIVITY HEADER */
+.activity-header {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* ACTIVITY TITLE */
+.activity-header h2 {
+    font-size: 21px;
+}
+
+/* REVIEW QUEUE */
+.activity-header a {
+    color: #32877d;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+/* ACTIVITY LIST */
+.activity-list {
+    width: 100%;
+    border: 1px solid #e5ddd1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ACTIVITY ITEM */
+.activity-item {
+    width: 100%;
+    min-height: 85px;
+    padding: 20px;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* LAST ACTIVITY */
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+/* ACTIVITY DOT */
+.activity-dot {
+    width: 9px;
+    height: 9px;
+    background: #32877d;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+/* ACTIVITY DETAILS */
+.activity-details {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ACTIVITY TITLE */
+.activity-details h3 {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* ACTIVITY DESCRIPTION */
+.activity-details p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #75829a;
+}
+
+/* ACTIVITY DATE */
+.activity-item time {
+    color: #75829a;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+/* TABLET */
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+    .main-content {
+        margin-left: 230px;
+        width: calc(100% - 230px);
+    }
+
+    .topbar {
+        padding: 15px 25px;
+    }
+
+    .dashboard {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        width: calc(50% - 9px);
+    }
+
+    .content-section {
+        gap: 20px;
+    }
+
+    .left-content {
+        width: 55%;
+    }
+
+    .right-content {
+        width: 45%;
+    }
+
+    .activity-item {
+        padding: 15px;
+        gap: 10px;
+    }
+
+}
+
+/* SMALL TABLET */
+@media (max-width: 850px) {
+
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date {
+        white-space: normal;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .chart-panel {
+        height: 300px;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 550px) {
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 120px;
+        padding: 15px 7px;
+    }
+
+    /* LOGO */
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        margin-bottom: 30px;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .logo h2 {
+        font-size: 13px;
+    }
+
+    /* MENU TITLE */
+    .menu-title {
+        font-size: 7px;
+        letter-spacing: 1px;
+        margin: 0 4px 15px;
+    }
+
+    /* NAVIGATION */
+    .sidebar nav {
+        gap: 5px;
+    }
+
+    .sidebar nav a {
+        min-height: 45px;
+        gap: 5px;
+        padding: 8px 5px;
+        font-size: 10px;
+    }
+
+    .nav-icon {
+        font-size: 13px;
+    }
+
+    .arrow {
+        font-size: 15px;
+    }
+
+    /* SIGN OUT */
+    .signout {
+        font-size: 10px;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+        margin-left: 120px;
+        width: calc(100% - 120px);
+    }
+
+    /* HEADER */
+    .topbar {
+        height: auto;
+        min-height: 85px;
+        padding: 12px 10px;
+        gap: 8px;
+    }
+
+    .header-title small {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .header-title h1 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* HEADER RIGHT */
+    .header-right {
+        gap: 5px;
+    }
+
+    .connection {
+        font-size: 8px;
+        padding: 7px;
+        gap: 4px;
+    }
+
+    .connection span {
+        width: 6px;
+        height: 6px;
+    }
+
+    .user {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    /* DASHBOARD */
+    .dashboard {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    /* INTRO */
+    .intro {
+        gap: 10px;
+    }
+
+    .intro p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .date {
+        font-size: 9px;
+    }
+
+    /* STATISTICS */
+    .stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* STAT CARD */
+    .stat-card {
+        width: 100%;
+        height: 150px;
+        padding: 18px;
+    }
+
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .stat-card h2 {
+        font-size: 27px;
+        margin-top: 15px;
+        margin-bottom: 6px;
+    }
+
+    .stat-card p {
+        font-size: 10px;
+        white-space: normal;
+    }
+
+    /* LOWER CONTENT */
+    .content-section {
+        gap: 20px;
+    }
+
+    /* SECTION HEADING */
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    /* CHART PANEL */
+    .chart-panel {
+        height: 260px;
+        padding: 15px;
+    }
+
+    .chart-header h3 {
+        font-size: 13px;
+    }
+
+    .chart-header p {
+        font-size: 10px;
+    }
+
+    .chart-icon {
+        font-size: 17px;
+    }
+
+    .chart-area {
+        height: 150px;
+    }
+
+    .chart-labels span {
+        font-size: 7px;
+    }
+
+    /* ACTIVITY HEADER */
+    .activity-header {
+        min-height: 35px;
+        gap: 5px;
+    }
+
+    .activity-header h2 {
+        font-size: 16px;
+    }
+
+    .activity-header a {
+        font-size: 9px;
+    }
+
+    /* ACTIVITY ITEM */
+    .activity-item {
+        min-height: 75px;
+        padding: 12px 10px;
+        gap: 8px;
+    }
+
+    .activity-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .activity-details h3 {
+        font-size: 10px;
+    }
+
+    .activity-details p {
+        font-size: 9px;
+    }
+
+    .activity-item time {
+        font-size: 8px;
+    }
+
+}
