@@ -89,11 +89,16 @@ img {
     transition: background 0.2s ease, color 0.2s ease;
 }
 
+
 .sidebar nav a:hover,
-.sidebar a:hover,
-.sidebar nav a.active {
+.sidebar a:hover {
     background: #2b6434;
-    color: #fff;
+    color: white;
+}
+
+.sidebar nav a.active:hover {
+    background: #438c50;
+    color: #202a40;
 }
 
 .signout {
