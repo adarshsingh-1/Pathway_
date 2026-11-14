@@ -78,7 +78,7 @@ img {
     gap: 9px;
 }
 
-.sidebar nav a {
+.sidebar nav a, .signout {
     display: flex;
     align-items: center;
     min-height: 48px;
