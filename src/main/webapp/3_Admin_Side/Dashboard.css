@@ -77,6 +77,10 @@ img {
     flex-direction: column;
     gap: 9px;
 }
+.sidebar nav a.active {
+    background: #438c50;
+    color: #202a40;
+}
 
 .sidebar nav a, .signout {
     display: flex;
