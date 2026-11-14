@@ -1,0 +1,842 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf9f6;
+    color: #253047;
+    font-size: 12px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #01605c;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.menu-title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #ffbd38;
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a,
+.signout {
+    text-decoration: none;
+    color: #d0d7e5;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.sidebar nav a.active {
+    background: #438c50;
+    color: #202a40;
+}
+
+.sidebar nav a:hover,
+.sidebar a:hover {
+    background: #2b6434;
+    color: white;
+}
+
+.sidebar nav a.active:hover {
+    background: #438c50;
+    color: #202a40;
+}
+
+.signout {
+    margin-top: auto;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* =========================
+   TOP HEADER
+========================= */
+
+.topbar {
+    min-height: 80px;
+    border-bottom: 2px solid #e7e0d6;
+    padding: 7px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #faf9f6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topbar p {
+    color: gray;
+    font-size: 15px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+    font-family: Georgia, serif;
+}
+
+.user {
+    background: #ffbd38;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+.page-content {
+    width: 100%;
+    padding: 36px 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    min-width: 0;
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+.intro {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #75829a;
+}
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-button {
+    min-height: 51px;
+    padding: 0 20px;
+    background: #01605c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: inherit;
+    border-right: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.add-button:hover {
+    border: 2px solid goldenrod;
+}
+
+.plus {
+    font-size: 23px;
+    font-weight: normal;
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+
+.search-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    width: min(524px, 100%);
+    height: 52px;
+    padding: 0 16px;
+    background: #fffefa;
+    border: 1px solid #ded5c8;
+    border-radius: 19px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.search-icon {
+    font-size: 25px;
+    color: #75829a;
+    flex-shrink: 0;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    color: #253047;
+}
+
+.search-box input::placeholder {
+    color: #9aa2ae;
+}
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.table-container {
+    width: 100%;
+    background: #fffefa;
+    border: 1px solid #e5ddd1;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.table-header {
+    width: 100%;
+    min-height: 57px;
+    padding: 0 23px;
+    background: #f8f6f1;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    align-items: center;
+}
+
+.table-header div {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #75829a;
+}
+
+/* =========================
+   TABLE ROW
+========================= */
+
+.table-row {
+    width: 100%;
+    min-height: 89px;
+    padding: 12px 23px;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background: #fffdf8;
+}
+
+/* =========================
+   COLUMN WIDTHS
+========================= */
+
+.column-opportunity {
+    width: 32%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.column-package {
+    width: 13%;
+    display: flex;
+    align-items: center;
+}
+
+.column-eligibility {
+    width: 13%;
+    display: flex;
+    align-items: center;
+}
+
+.column-deadline {
+    width: 11%;
+    display: flex;
+    align-items: center;
+}
+
+.column-applicants {
+    width: 17%;
+    display: flex;
+    align-items: center;
+}
+
+.column-actions {
+    width: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+/* =========================
+   OPPORTUNITY DETAILS
+========================= */
+
+.column-opportunity h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #253047;
+    overflow-wrap: anywhere;
+}
+
+.column-opportunity p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #75829a;
+    overflow-wrap: anywhere;
+}
+
+.column-package {
+    font-size: 16px;
+    color: #253047;
+}
+
+.column-eligibility {
+    font-size: 16px;
+    color: #253047;
+}
+
+.column-deadline {
+    font-size: 14px;
+    color: #75829a;
+}
+
+.column-applicants {
+    font-size: 16px;
+    font-weight: bold;
+    color: #253047;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.edit-button,
+.delete-button {
+    width: 30px;
+    height: 35px;
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    color: #75829a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    color: #2865f5;
+}
+
+.delete-button:hover {
+    color: #e91e70;
+}
+
+/* =========================
+   SMALL DESKTOP / LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    .page-content {
+        padding: 28px 22px;
+    }
+
+    .table-header,
+    .table-row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .column-opportunity {
+        width: 29%;
+    }
+
+    .column-package {
+        width: 14%;
+    }
+
+    .column-eligibility {
+        width: 14%;
+    }
+
+    .column-deadline {
+        width: 12%;
+    }
+
+    .column-applicants {
+        width: 15%;
+    }
+
+    .column-actions {
+        width: 16%;
+    }
+
+    .column-opportunity h3 {
+        font-size: 15px;
+    }
+
+    .column-opportunity p {
+        font-size: 12px;
+    }
+
+    .column-package,
+    .column-eligibility {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    /* Sidebar moves above content */
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 12px 18px;
+        overflow: visible;
+    }
+
+    .logo {
+        margin: 5px 0 15px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: auto;
+    }
+
+    .menu-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .sidebar nav a {
+        font-size: 13px;
+        padding: 11px 8px;
+        text-align: center;
+    }
+
+    .signout {
+        margin-top: 12px;
+        align-self: flex-start;
+        font-size: 13px;
+    }
+
+    /* Main content */
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .topbar {
+        min-height: 75px;
+        padding: 10px 22px;
+    }
+
+    .topbar h1 {
+        font-size: 26px;
+    }
+
+    .page-content {
+        padding: 25px 22px;
+    }
+
+    .intro {
+        flex-wrap: wrap;
+    }
+
+    /* Table becomes cards */
+
+    .table-container {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        gap: 14px;
+        overflow: visible;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .table-row {
+        min-height: auto;
+        padding: 18px;
+        background: #fffefa;
+        border: 1px solid #e5ddd1;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px 12px;
+    }
+
+    .table-row:last-child {
+        border-bottom: 1px solid #e5ddd1;
+    }
+
+    .table-row:hover {
+        background: #fffefa;
+    }
+
+    .column-opportunity {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e5ddd1;
+    }
+
+    .column-opportunity h3 {
+        font-size: 18px;
+    }
+
+    .column-opportunity p {
+        font-size: 13px;
+    }
+
+    .column-package,
+    .column-eligibility,
+    .column-deadline,
+    .column-applicants {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 14px;
+    }
+
+    .column-package::before {
+        content: "PACKAGE";
+    }
+
+    .column-eligibility::before {
+        content: "ELIGIBILITY";
+    }
+
+    .column-deadline::before {
+        content: "DEADLINE";
+    }
+
+    .column-applicants::before {
+        content: "APPLICANTS";
+    }
+
+    .column-package::before,
+    .column-eligibility::before,
+    .column-deadline::before,
+    .column-applicants::before {
+        font-family: monospace;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #75829a;
+    }
+
+    .column-actions {
+        width: 100%;
+        grid-column: 1 / -1;
+        justify-content: flex-end;
+        padding-top: 10px;
+        border-top: 1px solid #e5ddd1;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    .logo {
+        margin-bottom: 13px;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .menu-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .sidebar nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .sidebar nav a {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
+    .signout {
+        font-size: 12px;
+    }
+
+    /* Header */
+
+    .topbar {
+        min-height: 68px;
+        padding: 10px 13px;
+    }
+
+    .topbar p {
+        font-size: 11px;
+    }
+
+    .topbar h1 {
+        font-size: 22px;
+    }
+
+    .user {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    /* Page */
+
+    .page-content {
+        padding: 20px 13px;
+        gap: 18px;
+    }
+
+    .intro {
+        align-items: stretch;
+        gap: 13px;
+    }
+
+    .intro p {
+        font-size: 13px;
+    }
+
+    /* Add button */
+
+    .add-button {
+        width: fit-content;
+        min-height: 43px;
+        padding: 0 15px;
+        border-radius: 13px;
+        font-size: 13px;
+    }
+
+    .plus {
+        font-size: 19px;
+    }
+
+    /* Search */
+
+    .search-box {
+        width: 100%;
+        height: 45px;
+        padding: 0 12px;
+        gap: 9px;
+        border-radius: 13px;
+    }
+
+    .search-icon {
+        font-size: 21px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    /* Opportunity cards */
+
+    .table-container {
+        gap: 12px;
+    }
+
+    .table-row {
+        padding: 15px;
+        gap: 15px 10px;
+        border-radius: 14px;
+    }
+
+    .column-opportunity h3 {
+        font-size: 16px;
+    }
+
+    .column-opportunity p {
+        font-size: 12px;
+    }
+
+    .column-package,
+    .column-eligibility,
+    .column-deadline,
+    .column-applicants {
+        font-size: 13px;
+    }
+
+    .column-actions {
+        gap: 12px;
+    }
+}
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+    .topbar p {
+        font-size: 10px;
+    }
+
+    .page-content {
+        padding: 16px 10px;
+    }
+
+    .sidebar nav a {
+        font-size: 11px;
+    }
+
+    .table-row {
+        padding: 12px;
+        gap: 13px 8px;
+    }
+
+    .column-opportunity h3 {
+        font-size: 15px;
+    }
+
+    .column-package,
+    .column-eligibility,
+    .column-deadline,
+    .column-applicants {
+        font-size: 12px;
+    }
+}

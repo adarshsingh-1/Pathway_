@@ -1,0 +1,18 @@
+
+# Maven generated files
+target/
+
+# Private configuration
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# NetBeans private files
+nbproject/private/
+
+# Windows files
+desktop.ini
+Thumbs.db

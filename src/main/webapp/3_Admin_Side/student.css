@@ -1,0 +1,1020 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf9f6;
+    color: #253047;
+    font-size: 12px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #01605c;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.menu-title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #ffbd38;
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a,
+.signout {
+    text-decoration: none;
+    color: #d0d7e5;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.sidebar nav a.active {
+    background: #438c50;
+    color: #202a40;
+}
+
+.sidebar nav a:hover,
+.sidebar a:hover {
+    background: #2b6434;
+    color: white;
+}
+
+.sidebar nav a.active:hover {
+    background: #438c50;
+    color: #202a40;
+}
+
+.signout {
+    margin-top: auto;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    min-width: 0;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+    min-height: 80px;
+    border-bottom: 2px solid #e7e0d6;
+    padding: 7px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #faf9f6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topbar p {
+    color: gray;
+    font-size: 15px;
+}
+
+.topbar h1,
+.topbar h2 {
+    font-size: 30px;
+    font-family: Georgia, serif;
+}
+
+.user {
+    background: #ffbd38;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+.page-content {
+    width: 100%;
+    min-width: 0;
+    padding: 35px 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.intro h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #253047;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #75829a;
+    line-height: 1.6;
+}
+
+.records {
+    color: #75829a;
+    font-size: 13px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* =========================
+   SEARCH AND FILTER
+========================= */
+
+.search-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.search-box {
+    width: 85%;
+    height: 50px;
+    min-width: 0;
+    padding: 0 17px;
+    border: 1px solid #ded5c8;
+    border-radius: 19px;
+    background: #fffefa;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    color: #253047;
+}
+
+.search-box input::placeholder {
+    color: #9aa2ae;
+}
+
+.branch-filter {
+    width: 15%;
+    min-width: 150px;
+    height: 50px;
+    padding: 0 14px;
+    border: 1px solid #ded5c8;
+    border-radius: 19px;
+    background: #fffefa;
+    color: #253047;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-box:focus-within,
+.branch-filter:focus {
+    border-color: #01605c;
+}
+
+/* =========================
+   STUDENT TABLE
+========================= */
+
+.student-table {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #e5ddd1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffefa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.table-header {
+    width: 100%;
+    min-height: 55px;
+    padding: 0 23px;
+    background: #f8f6f1;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    align-items: center;
+}
+
+/* =========================
+   COLUMN WIDTHS
+========================= */
+
+.student-column {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.academic-column {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-column {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.status-column {
+    width: 15%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-column {
+    width: 10%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   TABLE HEADER TEXT
+========================= */
+
+.table-header .student-column,
+.table-header .academic-column,
+.table-header .skills-column,
+.table-header .status-column,
+.table-header .contact-column {
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #718098;
+}
+
+/* =========================
+   STUDENT ROW
+========================= */
+
+.student-row {
+    width: 100%;
+    min-height: 83px;
+    padding: 12px 23px;
+    border-bottom: 1px solid #e5ddd1;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.student-row:last-child {
+    border-bottom: none;
+}
+
+.student-row:hover {
+    background: #fffdf8;
+}
+
+/* =========================
+   STUDENT DETAILS
+========================= */
+
+.student-details {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+/* =========================
+   AVATAR
+========================= */
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: #fff0d2;
+    color: #253047;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* =========================
+   STUDENT NAME
+========================= */
+
+.student-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   ACADEMIC DETAILS
+========================= */
+
+.academic-column strong {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.academic-column p {
+    font-size: 14px;
+    color: #75829a;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill {
+    background: #f0ede7;
+    color: #526078;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status.active {
+    color: #253047;
+}
+
+.status.placed {
+    color: #32877d;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-link {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e5ddd1;
+    border-radius: 14px;
+    background: #fffefa;
+    color: #253047;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+
+.contact-link:hover {
+    background: #ffbd38;
+    border-color: #ffbd38;
+}
+
+/* =========================
+   NO RESULTS MESSAGE
+========================= */
+
+#noStudentsFound {
+    padding: 20px;
+    text-align: center;
+    color: #75829a;
+    font-size: 14px;
+}
+
+/* =========================
+   SMALL DESKTOP / LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .page-content {
+        padding: 28px 22px;
+    }
+
+    .search-section {
+        gap: 12px;
+    }
+
+    .search-box {
+        flex: 1 1 0;
+        width: auto;
+    }
+
+    .branch-filter {
+        flex: 0 1 240px;
+        width: auto;
+        min-width: 0;
+    }
+
+    .table-header {
+        padding: 0 12px;
+    }
+
+    .student-row {
+        padding: 12px;
+    }
+
+    .student-column {
+        width: 27%;
+    }
+
+    .academic-column {
+        width: 25%;
+    }
+
+    .skills-column {
+        width: 23%;
+    }
+
+    .status-column {
+        width: 15%;
+    }
+
+    .contact-column {
+        width: 10%;
+    }
+
+    .student-details {
+        gap: 8px;
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .student-details h3 {
+        font-size: 13px;
+    }
+
+    .academic-column strong {
+        font-size: 13px;
+    }
+
+    .academic-column p {
+        font-size: 11px;
+    }
+
+    .skill {
+        font-size: 9px;
+        padding: 5px 7px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    /* Sidebar */
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 12px 18px;
+        overflow: visible;
+    }
+
+    .logo {
+        margin: 5px 0 15px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: auto;
+    }
+
+    .menu-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .sidebar nav a {
+        font-size: 13px;
+        padding: 11px 8px;
+        text-align: center;
+    }
+
+    .signout {
+        margin-top: 12px;
+        align-self: flex-start;
+        font-size: 13px;
+    }
+
+    /* Main */
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .topbar {
+        min-height: 75px;
+        padding: 10px 22px;
+    }
+
+    .topbar h1,
+    .topbar h2 {
+        font-size: 26px;
+    }
+
+    .page-content {
+        padding: 25px 22px;
+    }
+
+    /* Search */
+
+    .search-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 100%;
+        flex: 0 0 auto;
+        height: 50px;
+    }
+
+    .branch-filter {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+        height: 50px;
+    }
+
+    /* Student table becomes cards */
+
+    .student-table {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        overflow: visible;
+        gap: 14px;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .student-row {
+        min-height: auto;
+        padding: 18px;
+        background: #fffefa;
+        border: 1px solid #e5ddd1;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px 12px;
+    }
+
+    .student-row:last-child {
+        border-bottom: 1px solid #e5ddd1;
+    }
+
+    .student-row:hover {
+        background: #fffefa;
+    }
+
+    .student-column {
+        width: 100%;
+        grid-column: 1 / -1;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e5ddd1;
+    }
+
+    .student-details {
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+
+    .student-details h3 {
+        font-size: 17px;
+    }
+
+    .academic-column,
+    .skills-column,
+    .status-column,
+    .contact-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 7px;
+    }
+
+    /* Labels for mobile cards */
+
+    .academic-column::before {
+        content: "ACADEMICS";
+    }
+
+    .skills-column::before {
+        content: "SKILLS";
+    }
+
+    .status-column::before {
+        content: "STATUS";
+    }
+
+    .contact-column::before {
+        content: "CONTACT";
+    }
+
+    .academic-column::before,
+    .skills-column::before,
+    .status-column::before,
+    .contact-column::before {
+        font-family: monospace;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.7px;
+        color: #75829a;
+    }
+
+    .academic-column strong {
+        font-size: 15px;
+    }
+
+    .academic-column p {
+        font-size: 12px;
+    }
+
+    .skills-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .skills-column::before {
+        width: 100%;
+    }
+
+    .skill {
+        font-size: 10px;
+    }
+
+    .status-column {
+        align-items: flex-start;
+    }
+
+    .status {
+        font-size: 12px;
+    }
+
+    .contact-column {
+        align-items: flex-start;
+    }
+
+    .contact-link {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    /* Sidebar */
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    .logo {
+        margin: 5px 0 13px;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .menu-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .sidebar nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .sidebar nav a {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
+    .signout {
+        font-size: 12px;
+    }
+
+    /* Topbar */
+
+    .topbar {
+        min-height: 68px;
+        padding: 10px 13px;
+        gap: 8px;
+    }
+
+    .topbar p {
+        font-size: 11px;
+    }
+
+    .topbar h1,
+    .topbar h2 {
+        font-size: 22px;
+    }
+
+    .user {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    /* Page content */
+
+    .page-content {
+        padding: 20px 13px;
+        gap: 18px;
+    }
+
+    /* Introduction */
+
+    .intro {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .intro h2 {
+        font-size: 21px;
+    }
+
+    .intro p {
+        font-size: 13px;
+    }
+
+    .records {
+        font-size: 11px;
+    }
+
+    /* Search */
+
+    .search-section {
+        gap: 10px;
+    }
+
+    .search-box {
+        height: 44px;
+        padding: 0 12px;
+        border-radius: 13px;
+    }
+
+    .search-box input {
+        font-size: 12px;
+    }
+
+    .branch-filter {
+        height: 44px;
+        padding: 0 10px;
+        font-size: 12px;
+        border-radius: 13px;
+    }
+
+    /* Student cards */
+
+    .student-table {
+        gap: 12px;
+    }
+
+    .student-row {
+        padding: 15px;
+        gap: 15px 10px;
+        border-radius: 14px;
+    }
+
+    .student-details h3 {
+        font-size: 15px;
+    }
+
+    .academic-column strong {
+        font-size: 14px;
+    }
+
+    .academic-column p {
+        font-size: 11px;
+    }
+
+    .skill {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    .contact-link {
+        width: 33px;
+        height: 33px;
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+    .topbar {
+        padding: 10px;
+    }
+
+    .topbar p {
+        font-size: 10px;
+    }
+
+    .topbar h1,
+    .topbar h2 {
+        font-size: 19px;
+    }
+
+    .page-content {
+        padding: 16px 10px;
+    }
+
+    .intro h2 {
+        font-size: 19px;
+    }
+
+    .intro p {
+        font-size: 12px;
+    }
+
+    .student-row {
+        padding: 12px;
+        gap: 13px 8px;
+    }
+
+    .student-details {
+        gap: 9px;
+    }
+
+    .student-details h3 {
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .academic-column strong {
+        font-size: 13px;
+    }
+
+    .academic-column p {
+        font-size: 10px;
+    }
+
+    .skill {
+        font-size: 9px;
+        padding: 4px 7px;
+    }
+}

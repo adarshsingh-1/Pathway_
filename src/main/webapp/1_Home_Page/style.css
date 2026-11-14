@@ -1,0 +1,1122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("image/background image.png");
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-image: url("image/background image.png");
+    border-bottom: 2px solid #f0ede8;
+}
+
+.logo {
+    border: none;
+}
+
+.logo img {
+    display: block;
+    object-fit: contain;
+}
+
+.nav-top {
+    display: flex;
+    align-items: center;
+}
+
+.nav-top a {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px;
+}
+
+.nav-top a:hover {
+    font-weight: bold;
+}
+
+.signin_header {
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid rgb(211, 210, 210);
+    border-radius: 40px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.signin_header:hover {
+    border: 2px solid black;
+    transform: translate(1.5px, -1.5px);
+}
+
+.signin_header a {
+    color: black;
+    text-decoration: none;
+}
+
+.signin_header a:hover {
+    color: black;
+}
+
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 575px;
+    height: auto;
+    margin: 40px 40px;
+    gap: 30px;
+}
+
+
+
+.home_left {
+    border: none;
+    width: 55%;
+    margin-left: 0;
+}
+
+.home_left h1 {
+    font-size: 75px;
+    line-height: 1.1;
+}
+
+.home_left p {
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+
+.home_signin {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.signin_home {
+    height: 32px;
+    width: 170px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: rgb(2, 2, 106);
+    box-shadow: 12px 6px 0px goldenrod;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.signin_home:hover {
+    box-shadow: 2px 2px 0px goldenrod;
+    border: 1px solid black;
+    transform: translate(10px, 4px);
+}
+
+.signin_home a {
+    color: white;
+    text-decoration: none;
+}
+
+.start {
+    height: 32px;
+    width: 160px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 10px;
+    padding: 7px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.start:hover {
+    border: 1px solid black;
+    transform: translateY(2px);
+}
+
+.start a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.h1 {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.h1::after {
+    content: "";
+    display: block;
+    width: 20%;
+    margin-left: 40px;
+    margin-top: 5px;
+    position: relative;
+    height: 3px;
+    background: green;
+}
+
+.home_leftPlacementStatic {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Static_box {
+    border: 1px solid whitesmoke;
+    height: 100px;
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px gray;
+    background-color: whitesmoke;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.Static_box h4 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.Static_box h3 {
+    color: rgb(15, 233, 160);
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.Static_box p {
+    color: gray;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.Static_box:hover {
+    transform: scale(1.01);
+    border: 2px double whitesmoke;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.home_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    margin: 0;
+}
+
+.home_right img {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px goldenrod;
+    transition: 0.3s;
+}
+
+.home_right img:hover {
+    transform: scale(1.05);
+}
+
+
+.whypathway {
+    background-color: aliceblue;
+    border: none;
+    min-height: 750px;
+    height: auto;
+    margin: 20px;
+    padding: 40px 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.whypathway i {
+    color: green;
+}
+
+.whypathway h2 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.whypathway h2::after {
+    content: "";
+    display: block;
+    width: 96.5%;
+    position: relative;
+    height: 3px;
+    background: green;
+    margin-top: 10px;
+}
+
+
+.whypathway_header {
+    margin-left: 50px;
+    text-align: center;
+}
+
+
+.whypathway_body {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin: 35px;
+    align-items: center;
+}
+
+.whypathway_card {
+    min-height: 150px;
+    height: auto;
+    width: 900px;
+    max-width: 100%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px gray;
+    transition: 0.3s;
+}
+
+.whypathway_card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px goldenrod;
+}
+
+
+.For_recruiters {
+    min-height: 550px;
+    height: auto;
+    background-color: aliceblue;
+    margin: 20px;
+    padding: 20px 15px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px gray;
+    text-align: center;
+}
+
+
+.For_recruiters_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+.For_recruiters_left {
+    margin: 30px;
+}
+
+.For_recruiters_left h3 {
+    font-size: 50px;
+}
+
+.For_recruiters_left p {
+    color: rgb(102, 89, 89);
+    font-size: 20px;
+}
+
+.For_recruiters_right {
+    border: 1px solid black;
+    width: 200px;
+    height: fit-content;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(236, 220, 190);
+    padding: 8px;
+}
+
+
+.For_recruiters_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 30px;
+}
+
+
+.card {
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    background-color: beige;
+    text-align: center;
+    margin: 15px;
+    align-items: center;
+    box-shadow: 0px 0px 3px gray;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 5px goldenrod;
+}
+
+
+.card1 {
+    border: 1px solid wheat;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    background-color: rgb(221, 188, 147);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Our_approach {
+    color: white;
+    background-color: rgb(20, 20, 67);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 450px;
+    height: auto;
+    margin: 20px;
+    padding: 40px;
+    gap: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px goldenrod;
+}
+
+.Our_approach h1 {
+    font-size: 50px;
+}
+
+
+.Our_approach_left {
+    width: 55%;
+    margin: 0;
+    text-align: center;
+}
+
+.Our_approach_left p {
+    font-size: 30px;
+    color: goldenrod;
+}
+
+.Our_approach_left p::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 3px;
+    background: green;
+    margin-top: 10px;
+}
+
+.Our_approach_left h2 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.Our_approach_left b {
+    display: block;
+    color: rgb(205, 187, 187);
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+.Our_approach_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    margin: 0;
+    gap: 15px;
+}
+
+.Our_approach2_card {
+    border: 1px solid;
+    margin-top: 7px;
+    height: 100px;
+    width: 200px;
+    margin-left: 0;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+.box {
+    background-color: rgba(45, 45, 114, 0.378);
+    box-shadow: 2px 2px 5px goldenrod;
+}
+
+.box:hover {
+    background-color: rgba(95, 95, 216, 0.378);
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px goldenrod;
+}
+
+.box1 {
+    background-color: goldenrod;
+    color: black;
+    box-shadow: 2px 2px 5px beige;
+}
+
+.box1:hover {
+    background-color: rgb(210, 168, 61);
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px beige;
+}
+
+
+footer {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer {
+    border: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    
+
+    .nav-top a {
+        margin: 8px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+
+    
+
+    .home {
+        margin: 35px 25px;
+        gap: 20px;
+    }
+
+    .home_left {
+        width: 55%;
+    }
+
+    .home_left h1 {
+        font-size: 55px;
+    }
+
+    .home_right {
+        width: 45%;
+    }
+
+    .home_right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .home_leftPlacementStatic {
+        gap: 12px;
+    }
+
+    .Static_box {
+        width: 135px;
+    }
+
+
+    
+
+    .whypathway {
+        padding: 35px 20px;
+    }
+
+    .whypathway_card {
+        width: 85%;
+    }
+
+
+
+    .For_recruiters_left h3 {
+        font-size: 40px;
+    }
+
+    .For_recruiters_body {
+        margin: 0 10px;
+    }
+
+    .card {
+        width: 220px;
+        margin: 12px;
+    }
+
+
+
+    .Our_approach {
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .Our_approach_left {
+        width: 55%;
+    }
+
+    .Our_approach_left h2 {
+        font-size: 38px;
+    }
+
+    .Our_approach_left b {
+        font-size: 16px;
+    }
+
+    .Our_approach_right {
+        width: 45%;
+        gap: 10px;
+    }
+
+    .Our_approach2_card {
+        width: 48%;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 15px;
+        margin-top: 0;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 110px;
+        height: auto;
+    }
+
+    .nav-top {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .nav-top a {
+        margin: 5px;
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .signin_header {
+        margin-left: auto;
+    }
+
+
+    
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        min-height: 0;
+        margin: 35px 20px;
+        gap: 35px;
+    }
+
+    .home_left {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .home_left h1 {
+        font-size: 45px;
+    }
+
+    .home_left p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .home_signin {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .signin_home {
+        margin: 0;
+    }
+
+    .h1 {
+        margin-top: 40px;
+        font-size: 23px;
+    }
+
+    .h1::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home_leftPlacementStatic {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .Static_box {
+        width: 150px;
+        height: 100px;
+    }
+
+    .home_right {
+        width: 100%;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .home_right img {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+
+    .whypathway {
+        min-height: 0;
+        height: auto;
+        margin: 15px;
+        padding: 35px 15px;
+    }
+
+    .whypathway_header {
+        margin: 0;
+    }
+
+    .whypathway_header h2 {
+        font-size: 35px;
+    }
+
+    .whypathway h2::after {
+        width: 100%;
+    }
+
+    .whypathway_body {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .whypathway_card {
+        width: 95%;
+        min-height: 130px;
+        height: auto;
+        padding: 20px 15px;
+        margin: 10px 0;
+    }
+
+
+    .For_recruiters {
+        min-height: 0;
+        height: auto;
+        margin: 15px;
+        padding: 25px 10px;
+    }
+
+    .For_recruiters_header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        gap: 15px;
+    }
+
+    .For_recruiters_left {
+        margin: 10px;
+    }
+
+    .For_recruiters_left h3 {
+        font-size: 35px;
+    }
+
+    .For_recruiters_left p {
+        font-size: 16px;
+    }
+
+    .For_recruiters_right {
+        margin: 0;
+    }
+
+    .For_recruiters_body {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .card {
+        width: 40%;
+        min-width: 130px;
+        max-width: 220px;
+        height: 120px;
+        margin: 10px;
+    }
+
+
+
+    .Our_approach {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 0;
+        height: auto;
+        margin: 15px;
+        padding: 35px 20px;
+        gap: 30px;
+    }
+
+    .Our_approach_left {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .Our_approach_left p {
+        font-size: 25px;
+    }
+
+    .Our_approach_left h2 {
+        font-size: 35px;
+    }
+
+    .Our_approach_left b {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .Our_approach_right {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .Our_approach2_card {
+        width: 40%;
+        max-width: 200px;
+        margin: 5px;
+    }
+
+
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+
+
+    header {
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        width: 95px;
+        height: auto;
+    }
+
+    .nav-top {
+        gap: 0;
+    }
+
+    .nav-top a {
+        font-size: 11px;
+        margin: 3px;
+        padding: 5px;
+    }
+
+    .signin_header {
+        width: 70px;
+        padding: 5px;
+    }
+
+
+
+    .home {
+        margin: 25px 12px;
+        gap: 25px;
+    }
+
+    .home_left h1 {
+        font-size: 36px;
+    }
+
+    .home_left p {
+        font-size: 13px;
+    }
+
+    .home_signin {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .signin_home,
+    .start {
+        margin: 0;
+    }
+
+    .h1 {
+        font-size: 19px;
+        margin-top: 35px;
+    }
+
+    .home_leftPlacementStatic {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .Static_box {
+        width: calc(50% - 10px);
+        height: 105px;
+        flex-shrink: 1;
+    }
+
+    .Static_box h4 {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .Static_box h3 {
+        margin-left: 10px;
+        font-size: 17px;
+    }
+
+    .Static_box p {
+        margin-left: 10px;
+        font-size: 11px;
+    }
+
+    .home_right img {
+        width: 95%;
+        height: auto;
+    }
+
+
+
+    .whypathway {
+        margin: 10px;
+        padding: 30px 10px;
+    }
+
+    .whypathway_header {
+        font-size: 14px;
+    }
+
+    .whypathway_header h2 {
+        font-size: 28px;
+    }
+
+    .whypathway_body {
+        margin: 20px 0;
+    }
+
+    .whypathway_card {
+        width: 100%;
+        min-height: 130px;
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+
+
+
+    .For_recruiters {
+        margin: 10px;
+        padding: 20px 5px;
+    }
+
+    .For_recruiters_left h3 {
+        font-size: 27px;
+    }
+
+    .For_recruiters_left p {
+        font-size: 14px;
+    }
+
+    .For_recruiters_body {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .card {
+        width: calc(50% - 15px);
+        min-width: 0;
+        max-width: none;
+        height: 110px;
+        margin: 7px;
+        font-size: 13px;
+    }
+
+    .card1 {
+        margin: 10px;
+    }
+
+
+    .Our_approach {
+        margin: 10px;
+        padding: 25px 12px;
+        gap: 25px;
+    }
+
+    .Our_approach_left p {
+        font-size: 20px;
+    }
+
+    .Our_approach_left h2 {
+        font-size: 27px;
+    }
+
+    .Our_approach_left b {
+        font-size: 14px;
+    }
+
+    .Our_approach_right {
+        gap: 10px;
+    }
+
+    .Our_approach2_card {
+        width: 45%;
+        height: 90px;
+    }
+
+    .Our_approach2_card h1 {
+        font-size: 35px;
+    }
+
+
+    
+
+    footer {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 360px) {
+
+   
+
+    .logo img {
+        width: 85px;
+    }
+
+    .nav-top a {
+        font-size: 10px;
+        margin: 2px;
+        padding: 4px;
+    }
+
+
+    
+
+    .home_left h1 {
+        font-size: 31px;
+    }
+
+    .home_signin {
+        gap: 18px;
+    }
+
+    .home_leftPlacementStatic {
+        gap: 7px;
+    }
+
+    .Static_box {
+        width: calc(50% - 5px);
+    }
+
+
+    
+
+    .whypathway_header h2 {
+        font-size: 24px;
+    }
+
+    .whypathway_card {
+        font-size: 12px;
+    }
+
+
+    
+
+    .For_recruiters_left h3 {
+        font-size: 24px;
+    }
+
+    .card {
+        font-size: 11px;
+    }
+
+
+    
+
+    .Our_approach_left h2 {
+        font-size: 23px;
+    }
+
+    .Our_approach_left p {
+        font-size: 18px;
+    }
+
+}

@@ -1,0 +1,615 @@
+
+/* =================================
+   GLOBAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("image/background image.png");
+    background-attachment: fixed;
+    color: #18263f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* =================================
+   LEFT SECTION
+================================= */
+
+.left-section {
+    width: 45%;
+    min-height: 100vh;
+    background-color: rgb(20, 20, 67);
+    color: white;
+    padding: 48px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 150px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.left-content {
+    position: absolute;
+    left: 50px;
+    right: 30px;
+    top: 52%;
+    transform: translateY(-50%);
+}
+
+.small-heading {
+    color: goldenrod;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.left-content h1 {
+    font-size: 70px;
+    line-height: 0.98;
+    margin-bottom: 32px;
+}
+
+.left-content p {
+    max-width: 580px;
+    color: rgb(205, 187, 187);
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+/* =================================
+   BOTTOM STEPS
+================================= */
+
+.steps {
+    position: absolute;
+    bottom: 45px;
+    left: 50px;
+    right: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    gap: 40px;
+    color: rgb(205, 187, 187);
+    font-size: 14px;
+}
+
+/* =================================
+   RIGHT SECTION
+================================= */
+
+.right-Section {
+    width: 55%;
+    min-width: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-Section-Header {
+    text-align: left;
+    margin-left: 125px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.right-Section-Header a {
+    text-decoration: none;
+    color: #62758f;
+}
+
+/* =================================
+   REGISTRATION FORM CARD
+================================= */
+
+.right-Section-form {
+    border: 2px solid black;
+    border-radius: 20px;
+    min-height: 610px;
+    height: auto;
+    width: 550px;
+    overflow: hidden;
+    margin-left: 150px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px gray;
+}
+
+.right-Section-form .img {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.right-Section-form .img img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.right-Section-form h2 {
+    text-align: center;
+    color: rgb(15, 233, 160);
+    margin-top: 5px;
+}
+
+.right-Section-form > p {
+    text-align: center;
+    margin: 5px 10px 0;
+    color: #62758f;
+    line-height: 1.5;
+}
+
+/* =================================
+   FORM
+================================= */
+
+.form {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.form > span {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.input {
+    display: block;
+    border: 2px solid rgb(199, 194, 194);
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 30px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input:hover,
+.input:focus {
+    border: 2px solid black;
+    box-shadow: 0 2px 4px gray;
+}
+
+/* =================================
+   CONTINUE BUTTON
+================================= */
+
+.login {
+    display: block;
+    background-color: rgb(20, 20, 67);
+    color: whitesmoke;
+    height: 40px;
+    width: 400px;
+    border-right: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.login:hover {
+    border: 2px solid goldenrod;
+}
+
+/* =================================
+   OR DIVIDER
+================================= */
+
+.or {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 30px;
+    width: 80%;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.or span {
+    color: #777;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* =================================
+   GOOGLE BUTTON
+================================= */
+
+.google-btn {
+    height: 40px;
+    width: 400px;
+    border-right: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    border-radius: 20px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.google-btn:hover {
+    background-color: #f5f5f5;
+    border: 2px solid goldenrod;
+}
+
+/* =================================
+   SIGN IN SECTION
+================================= */
+
+.form_buttom {
+    background-color: antiquewhite;
+    display: flex;
+    min-height: 50px;
+    height: auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 12px 8px;
+    flex-wrap: wrap;
+}
+
+.form_buttom .p {
+    margin-top: 0;
+}
+
+.form_buttom a {
+    margin-top: 0;
+    text-decoration: none;
+    color: green;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - SMALL LAPTOPS
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .left-section {
+        width: 35%;
+        padding: 30px 25px;
+    }
+
+    .right-Section {
+        width: 65%;
+        flex: 1;
+    }
+
+    .left-content {
+        left: 25px;
+        right: 20px;
+    }
+
+    .left-content h1 {
+        font-size: clamp(38px, 4.5vw, 55px);
+    }
+
+    .left-content p {
+        font-size: 15px;
+    }
+
+    .steps {
+        left: 25px;
+        right: 20px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .right-Section-Header {
+        margin-left: 5%;
+    }
+
+    .right-Section-form {
+        width: 90%;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form {
+        width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .input,
+    .login,
+    .google-btn {
+        width: calc(100% - 30px);
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .page {
+        flex-direction: column;
+    }
+
+    /* Left section moves to the top */
+
+    .left-section {
+        width: 100%;
+        min-height: 410px;
+        padding: 30px;
+    }
+
+    .left-content {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 30px;
+    }
+
+    .left-content h1 {
+        font-size: clamp(38px, 6vw, 52px);
+        margin-bottom: 20px;
+    }
+
+    .left-content p {
+        max-width: 550px;
+        font-size: 16px;
+    }
+
+    .steps {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: 30px;
+        padding-top: 20px;
+        gap: 25px;
+    }
+
+    /* Right section */
+
+    .right-Section {
+        width: 100%;
+        min-height: auto;
+        align-items: center;
+        padding: 0 20px 30px;
+    }
+
+    .right-Section-Header {
+        width: 100%;
+        max-width: 550px;
+        margin: 25px auto;
+        height: auto;
+    }
+
+    .right-Section-form {
+        width: 100%;
+        max-width: 550px;
+        min-height: 610px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .form {
+        width: calc(100% - 50px);
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .input,
+    .login,
+    .google-btn {
+        width: calc(100% - 30px);
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - MOBILE PHONES
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .left-section {
+        min-height: 390px;
+        padding: 25px 22px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 60px;
+    }
+
+    .left-content {
+        margin-top: 25px;
+    }
+
+    .small-heading {
+        font-size: 11px;
+        margin-bottom: 18px;
+    }
+
+    .left-content h1 {
+        font-size: 36px;
+        line-height: 1.05;
+        margin-bottom: 18px;
+    }
+
+    .left-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .steps {
+        gap: 12px;
+        font-size: 12px;
+        margin-top: 25px;
+        padding-top: 18px;
+    }
+
+    .right-Section {
+        padding: 0 12px 25px;
+    }
+
+    .right-Section-Header {
+        margin: 22px auto;
+    }
+
+    .right-Section-form {
+        min-height: 0;
+        height: auto;
+        border-radius: 15px;
+        padding-top: 5px;
+    }
+
+    .right-Section-form .img {
+        margin-top: 15px;
+    }
+
+    .right-Section-form h2 {
+        font-size: 22px;
+    }
+
+    .right-Section-form > p {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+
+    .form {
+        width: calc(100% - 30px);
+        margin: 15px auto 0;
+    }
+
+    .form > span {
+        margin-left: 5px;
+        font-size: 14px;
+    }
+
+    .input {
+        width: 100%;
+        height: 42px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .login,
+    .google-btn {
+        width: 100%;
+        height: 42px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .or {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .or span {
+        font-size: 16px;
+        margin: 12px;
+    }
+
+    .form_buttom {
+        font-size: 13px;
+        gap: 7px;
+        min-height: 50px;
+        padding: 12px 5px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - VERY SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 350px) {
+
+    .left-section {
+        padding: 20px 16px;
+    }
+
+    .left-content h1 {
+        font-size: 31px;
+    }
+
+    .left-content p {
+        font-size: 13px;
+    }
+
+    .steps {
+        gap: 8px;
+        font-size: 11px;
+    }
+
+    .right-Section {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .right-Section-form {
+        border-radius: 12px;
+    }
+
+    .right-Section-form h2 {
+        font-size: 20px;
+    }
+
+    .form_buttom {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   LANDSCAPE MOBILE
+========================================= */
+
+@media screen and (max-height: 500px) and (max-width: 900px) {
+
+    .left-section {
+        min-height: 360px;
+    }
+
+    .left-content {
+        margin-top: 20px;
+    }
+
+    .left-content h1 {
+        font-size: 35px;
+    }
+
+    .steps {
+        margin-top: 20px;
+    }
+}
