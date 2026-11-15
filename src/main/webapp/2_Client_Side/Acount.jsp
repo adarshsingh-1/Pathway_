@@ -89,7 +89,7 @@
                         <input class="input"
                                type="password"
                                id="confirmPassword"
-                               
+                               name="confirmPassword"
                                placeholder="Enter same password"
                                >
 
