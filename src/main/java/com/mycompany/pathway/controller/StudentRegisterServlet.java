@@ -1,3 +1,4 @@
+
 package com.mycompany.pathway.controller;
 
 import com.mycompany.pathway.dao.StudentDAO;
@@ -20,19 +21,14 @@ public class StudentRegisterServlet extends HttpServlet {
             HttpServletResponse response
     ) throws ServletException, IOException {
 
-        String fullName =
-                request.getParameter("fullName");
+        String fullName = request.getParameter("fullName");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String confirmPassword = request.getParameter("confirmPassword");
 
-        String email =
-                request.getParameter("email");
-
-        String password =
-                request.getParameter("password");
-
-        String confirmPassword =
-                request.getParameter("confirmPassword");
-
-        if (!password.equals(confirmPassword)) {
+        // CHECK PASSWORD
+        if (password == null || confirmPassword == null
+                || !password.equals(confirmPassword)) {
 
             response.sendRedirect(
                     request.getContextPath()
@@ -42,6 +38,7 @@ public class StudentRegisterServlet extends HttpServlet {
             return;
         }
 
+        // CHECK EMAIL
         StudentDAO studentDAO = new StudentDAO();
 
         if (studentDAO.emailExists(email)) {
@@ -54,12 +51,14 @@ public class StudentRegisterServlet extends HttpServlet {
             return;
         }
 
+        // CREATE STUDENT
         Student student = new Student();
 
         student.setFullName(fullName);
         student.setEmail(email);
         student.setPassword(password);
 
+        // REGISTER STUDENT
         boolean result = studentDAO.register(student);
 
         if (result) {
